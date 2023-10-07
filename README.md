@@ -18,7 +18,7 @@ However, the results of clustering `KMeansCluster.csv` and `KMeansClusterRatio.c
 
 ### RQ2 
 #### Detection
-To detect accelerated jobs, run `dotnet run -- cluster --all` and `dotnet run -- detect`. This produces `k-means_all.csv` and `ruled_detection.csv`. Then manually (using Excel) select detected jobs based on the threshold.
+To detect accelerated jobs, run `dotnet run -- cluster --all` and `dotnet run -- detect --all` (requires dataset). This produces `k-means_all.csv` and `ruled_detection.csv`. Then manually (using Excel) select detected jobs based on the threshold.
 
 #### Manual Inspection
 The inspection results are in the `rq2_classification.xlsx` file. The file `rq2_Final Labels.csv` is for computer processing.
@@ -30,4 +30,4 @@ As described in the paper, the labels are full sentences. To convert it to patte
 - `KMeansClusterRatio.csv` to `Desktop/build_accel/KMeansClusterRatio.csv`.
 - `rq1_inspection_agreed.csv` to `Desktop/build_accel/inspection_agreed.csv`.
 
-Then, run `dotnet run -- count-categories`. The results will appear in `Desktop/build_accel` folder. Note that we did further modifications to the category and pattern names, so the output does not fully align with what is presented in the paper.
+Then, run `dotnet run -- count-categories`. The results will appear in `Desktop/build_accel` folder. Note that we did further modifications to the category and pattern names, so there might be a very slight difference from the names in the paper.
