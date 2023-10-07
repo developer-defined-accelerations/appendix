@@ -2,6 +2,8 @@
 ## Replication
 Our dataset is very large (over 1TB uncompressed). Hence, our dataset is available on request. This repository contains the inspection results.
 
+Also, we made a video to demonstrate the replication. Feel free to visit [OneDrive](https://1drv.ms/v/s!AjL7RqayFf3Yk_w1jX3-z1_LSMp5aw) to watch the video. The commands used in the video are in the [Replication.md](Replication.md) file.
+
 ### RQ1
 #### Manual Inspection
 The samples and inspection results are in the `rq1_inspection.xlsx` file. The file `rq1_inspection_agreed.csv` is for computer processing (evaluating performance, counting agreement, etc.).
