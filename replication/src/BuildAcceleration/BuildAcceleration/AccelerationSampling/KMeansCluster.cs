@@ -273,7 +273,8 @@ internal class KMeansCluster
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
         {
-            Runtime.PythonDLL = "/usr/lib/aarch64-linux-gnu/libpython3.10.so.1";
+            // Runtime.PythonDLL = "/usr/lib/aarch64-linux-gnu/libpython3.10.so.1";
+            Runtime.PythonDLL = "/usr/lib/python3.10/config-3.10-x86_64-linux-gnu/libpython3.10.so";
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {

@@ -23,7 +23,7 @@ namespace ForecastBuildTime
             try
             {
                 // await host.Services.GetRequiredService<Playground>().RunAsync().ConfigureAwait(false);
-                // await host.Services.GetRequiredService<AccelerationProcessing.PredictionEvaluator>().EvaluateSensitivity().ConfigureAwait(false);
+                // await host.Services.GetRequiredService<AccelerationProcessing.PredictionEvaluator>().EvaluatePrediction().ConfigureAwait(false);
                 Environment.ExitCode = await host.RunCommandLineApplicationAsync();
             }
             catch (Exception e)
