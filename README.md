@@ -1,18 +1,18 @@
 # Developer-Defined Accelerations in Continuous Integration: A Detection Approach and Catalog of Patterns
 ## Replication
-Our database is very large (over 1TB uncompressed). Hence, our database is available on request. This repository contains the inspection results.
+Our dataset is very large (over 1TB uncompressed). Hence, our dataset is available on request. This repository contains the inspection results.
 
 ### RQ1
 #### Manual Inspection
-The samples and inspection results are in the `rq1_inspection.xlsx`` file. The file `rq1_inspection_agreed.csv` is for computer processing (evaluating performance and counting agreement etc.).
+The samples and inspection results are in the `rq1_inspection.xlsx` file. The file `rq1_inspection_agreed.csv` is for computer processing (evaluating performance, counting agreement, etc.).
 
 #### Evaluation
 First, download the files in `src` folder. Then, install [.NET SDK](https://dotnet.microsoft.com/en-us/download) (.NET 7.0 is preferred).
 
-Locate to `src/BuildAcceleration/BuildAcceleration` folder, run `dotnet run -- -h`.
+Locate to `src/BuildAcceleration/BuildAcceleration` folder, and run `dotnet run -- -h`.
 
-- To calculate clusters and ratios, run `dotnet run -- cluster` (this requires database, which is available on request).
-- To detect accelerated jobs by rules, run `dotnet run -- detect` (this also requires database).
+- To calculate clusters and ratios, run `dotnet run -- cluster` (this requires the dataset, which is available on request).
+- To detect accelerated jobs by rules, run `dotnet run -- detect` (this also requires the dataset).
 
 However, the results of clustering `KMeansCluster.csv` and `KMeansClusterRatio.csv` are placed in the replication folder. The results of detection `ruled_detection.csv` is also placed.
 
@@ -30,4 +30,4 @@ As described in the paper, the labels are full sentences. To convert it to patte
 - `KMeansClusterRatio.csv` to `Desktop/build_accel/KMeansClusterRatio.csv`.
 - `rq1_inspection_agreed.csv` to `Desktop/build_accel/inspection_agreed.csv`.
 
-Then, run `dotnet run -- count-categories`. The results will appear in `Desktop/build_accel` folder. Note that we did further modification to the category and pattern names, so the output does not fully align with what is presented in the paper.
+Then, run `dotnet run -- count-categories`. The results will appear in `Desktop/build_accel` folder. Note that we did further modifications to the category and pattern names, so the output does not fully align with what is presented in the paper.
