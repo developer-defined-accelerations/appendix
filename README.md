@@ -22,3 +22,6 @@ To detect accelerated jobs, run `dotnet run -- cluster --all` and `dotnet run --
 
 #### Manual Inspection
 The inspection results are in the `rq2_classification.xlsx` file. The file `rq2_Final Labels.csv` is for computer processing.
+
+#### Processing
+As described in the paper, the labels are full sentences. To convert it to labels, first, put `rq2_Final Labels.csv` to `Desktop/build_accel/Final Labels.csv`. Then, run `dotnet run -- count-categories`. The results will appear in `Desktop/build_accel` folder. Note that we did further modification to the category and pattern names, so the output does not fully align with what is presented in the paper.
