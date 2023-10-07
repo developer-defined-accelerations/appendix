@@ -39,7 +39,7 @@ namespace ForecastBuildTime
                 {
 #if DEBUG
                     s.AddTransient(_ =>
-                        new MongoClient("mongodb://forecastRead:+3o2;.cIU883%2Fz@aws:27017/forecastBuildTime"));
+                        new MongoClient("mongodb://forecastRead:+3o2;.cIU883%2Fz@localhost:27017/forecastBuildTime"));
 #else
                     s.AddTransient(_ =>
                         new MongoClient("mongodb://forecastRead:+3o2;.cIU883%2Fz@forecast-mongo:27017/forecastBuildTime"));
@@ -50,9 +50,9 @@ namespace ForecastBuildTime
                             .GetCollection<BuildEntry>("cc_builds_2021"));
 #if DEBUG
                     s.AddDbContext<ForecastingContext>(builder =>
-                        builder.UseNpgsql(@"Server=aws;Port=13339;Database=forecasting;User Id=forecasting;Password=r27sgJNKcdH-_SqT3nEWAMX}TyuNwWh>W8.RR.N7Gg7vjbGe{9PpKF8_xDfQ{b;", options => options.EnableRetryOnFailure().CommandTimeout(300)));
+                        builder.UseNpgsql(@"Server=localhost;Port=13339;Database=forecasting;User Id=forecasting;Password=r27sgJNKcdH-_SqT3nEWAMX}TyuNwWh>W8.RR.N7Gg7vjbGe{9PpKF8_xDfQ{b;", options => options.EnableRetryOnFailure().CommandTimeout(300)));
                     s.AddDbContextFactory<ForecastingContext>(builder =>
-                        builder.UseNpgsql(@"Server=aws;Port=13339;Database=forecasting;User Id=forecasting;Password=r27sgJNKcdH-_SqT3nEWAMX}TyuNwWh>W8.RR.N7Gg7vjbGe{9PpKF8_xDfQ{b;", options => options.EnableRetryOnFailure().CommandTimeout(300)));
+                        builder.UseNpgsql(@"Server=localhost;Port=13339;Database=forecasting;User Id=forecasting;Password=r27sgJNKcdH-_SqT3nEWAMX}TyuNwWh>W8.RR.N7Gg7vjbGe{9PpKF8_xDfQ{b;", options => options.EnableRetryOnFailure().CommandTimeout(300)));
 #else
                     s.AddDbContext<ForecastingContext>(builder =>
                         builder.UseNpgsql(@"Server=forecast-pg;Port=13339;Database=forecasting;User Id=forecasting;Password=r27sgJNKcdH-_SqT3nEWAMX}TyuNwWh>W8.RR.N7Gg7vjbGe{9PpKF8_xDfQ{b;", options => options.EnableRetryOnFailure().CommandTimeout(300)));
